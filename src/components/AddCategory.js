@@ -27,8 +27,9 @@ export const AddCategory = ({ setcategories }) => {
   // TODO - Agregar los proptypes
 
   return (
-    <form onSubmit={inputSubmit}>
-      <input type="text" value={inputValue} onChange={inputDataChange} />
+    <form className='d-flex' onSubmit={inputSubmit}>
+      <input className='form-control  me-3' type="text" value={inputValue} onChange={inputDataChange} placeholder='Are you thinking in something?' required />
+      <button className='btn btn-dark ' type="submit"> <i className="bi bi-search"></i> </button>
     </form>
   )
 }

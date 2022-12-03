@@ -24,17 +24,18 @@ export const GifGrid = ({ category }) => {
 
 
 
-
     return (
         <>
-            <h3>{category}</h3>
-            {/* operador arpersand */}
-            {loading && <p className='animate__animated animate__flash'> Loading...</p>}
+            <div className='m-3'>
+                <span className="badge text-primary bg-primary bg-opacity-25 border  border-primary mb-3"><i className="bi bi-tag-fill me-1"></i>{category}</span>
+                {/* operador arpersand */}
+                {loading && <p className='animate__animated animate__flash'> Loading...</p>}
 
-            <div className='card-grid'>
-                {images.map((img) =>
-                    <GritItem key={img.id} {...img} />
-                )}
+                <div className='row-masonry' >
+                    {images.map((img) =>
+                        <GritItem key={img.id} {...img} />
+                    )}
+                </div>
             </div>
         </>
     )
